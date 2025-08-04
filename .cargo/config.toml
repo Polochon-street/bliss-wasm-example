@@ -1,0 +1,6 @@
+[target.wasm32-unknown-emscripten]
+rustflags = [
+#"-C", "link-arg=-pthread", "-C", "link-arg=-s", "-C", "link-args=ENVIRONMENT=web,worker", "-C", "link-arg=-s", "-C", "link-args=USE_PTHREADS=1", "-C", "link-arg=-s", "-C", "link-arg=WASM_WORKERS", "-C", "link-arg=-s", "-C", "link-args=PTHREAD_POOL_SIZE=12",
+"-C", "target-feature=+atomics,+bulk-memory,+mutable-globals",
+#  "-C", "link-arg=-sENVIRONMENT=node",
+]
